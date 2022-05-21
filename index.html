@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>sdf</title>
+	<title>Warze Discord Banner</title>
 </head>
 <body>
 	<canvas width="1320" height="528" id="screen"></canvas>
-	<img src="/static/profilebanner.png" id="img" style="display: none">
+	<img src="profilebannerwarze.png" id="img" style="display: none">
 	<script type="text/javascript">
 		function draw(){for(time+=.1,ctx.clearRect(0,0,cvs.width,cvs.height),ctx.fillStyle="#3D0F0E",ctx.fillRect(0,0,1320,528),ctx.lineCap="round",ctx.lineJoin="round",ctx.strokeStyle="#F00",j=1;j<20;j++){for(ctx.globalAlpha=j/100,ctx.beginPath(),ctx.lineWidth=305-30*j,i=0;i<100;i++)ctx.lineTo(1320*i/100+50*Math.cos(i+time/200),264+50*Math.sin(i+time)+40*Math.cos(i-time/3)+50*Math.cos(i/5+time));ctx.stroke()}for(ctx.strokeStyle="#6B1B18",i=0;i<200;i++)ctx.globalAlpha=i/5e3,ctx.lineWidth=100,ctx.beginPath(),ctx.moveTo(600,600),ctx.bezierCurveTo(800+100*Math.sin(time),800-50*Math.sin(time)-3*i,1e3-50*Math.sin(time),1050-20*Math.cos(time)-3*i,1400,1e3-3*i),ctx.stroke();for(ctx.globalAlpha=1,ctx.strokeStyle="#CE342F",z=1;z<11;z++)for(ctx.lineWidth=310-30*z,wee=0,10==z?(ctx.strokeStyle="#CE342F",ctx.globalAlpha=1):(ctx.globalAlpha=z/50,ctx.strokeStyle="#000"),j=0;j<points.length;j++){for(ctx.beginPath(),i=0;i<points[j].length;i++)wee++,ctx.lineTo(points[j][i][0]+5*Math.sin(wee+time),points[j][i][1]+5*Math.cos(wee+time/2));ctx.stroke()}ctx.drawImage(img,0+20*Math.sin(time/2),0+10*Math.cos(time/3)+10*Math.sin(time/1.5))}cvs=document.getElementById("screen"),ctx=cvs.getContext("2d"),img=document.getElementById("img"),time=0,points=[[[200,50],[220,100],[240,50],[260,100],[280,50]],[[300,100],[320,50],[340,100],[320,90]],[[370,100],[360,50],[390,50],[375,75],[400,100]],[[420,50],[460,50],[430,100],[470,100]],[[520,50],[490,50],[500,75],[520,75],[510,100],[530,100]],[[550,100],[551,100]],[[570,50],[600,50],[610,100],[580,100],[570,50]],[[640,100],[630,50],[660,50],[645,75],[670,100]],[[720,50],[690,50],[700,100],[730,100],[725,75]]],setInterval(draw,1e3/60);
 	</script>
